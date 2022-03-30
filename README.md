@@ -1,5 +1,5 @@
-# Reposcanner
-Reposcanner is a python script to search through the commit history of Git repositories looking for interesting strings such as API keys, inspired by [truffleHog](https://raw.githubusercontent.com/dxa4481/truffleHog).
+# SCRZScrapper
+SCRZScrapper is tool for scrap content, title, image from article in Detik.com, this tool made with Python3
 
 ## Installation
 The python Git module is required (python3-git on Debian).
