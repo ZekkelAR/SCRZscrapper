@@ -100,3 +100,6 @@ grab_title = re.findall('<title>(.*?)</title>', req)
 		#print(sub_heading.text)
 		fac.append(sub_heading.text.strip())
 ```
+## License
+
+This project is licensed under the [MIT license](LICENSE).
