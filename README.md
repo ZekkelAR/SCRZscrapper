@@ -62,3 +62,41 @@ all_url = [] 																	 # save all url in array for calculate len
 		all_url.clear()
 		pages +=1
 ```
+
+### Scrap
+for scrap all article
+```js
+grab_title = re.findall('<title>(.*?)</title>', req)
+	for title in grab_title:
+		title_saved=title
+	soup = BeautifulSoup(req, 'html.parser')
+
+	try:
+		imeg_grab = BeautifulSoup(req, "html.parser")
+		warning = imeg_grab.find('div', class_="detail__media")
+		images = warning.find_all('img')
+		example = images[0].attrs['src']
+		#print('[x] Images : '+example)
+		image_saved = example
+	except:
+		try:
+			imeg_grab = BeautifulSoup(req, "html.parser")
+			warning = imeg_grab.find('figure')
+			images = warning.find('picture', class_="img_con lqd")
+
+			mages2 = warning.find('img')
+			example = mages2.attrs['src']
+			#print('[!] Images : '+example)
+		except:
+			pass
+
+
+
+	soup.div['class'] = 'detail__body-text itp_bodycontent'
+
+	fac = []
+	for sub_heading in soup.find_all('p'):
+		art = sub_heading.text.strip()
+		#print(sub_heading.text)
+		fac.append(sub_heading.text.strip())
+```
